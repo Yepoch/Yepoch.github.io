@@ -1,0 +1,109 @@
+.hljs .hljs-comment.line-number{
+	display:none
+}
+
+.hljs span{
+	display:inline
+}
+
+.hljs .hljs{
+	display:block;
+	overflow-x:auto;
+	padding:.5em;
+}
+
+.hljs .hljs,.hljs .hljs-tag,.hljs .hljs-subst{
+	color:#f8f8f2
+}
+
+.hljs .hljs-strong,.hljs .hljs-emphasis{
+	color:#a8a8a2
+}
+
+.hljs .hljs-bullet,.hljs .hljs-quote,.hljs .hljs-number,.hljs .hljs-regexp,.hljs .hljs-literal,.hljs .hljs-link{
+	color:#ae81ff
+}
+
+.hljs .hljs-code,.hljs .hljs-title,.hljs .hljs-section,.hljs .hljs-selector-class{
+	color:#a6e22e
+}
+
+.hljs .hljs-strong{
+	font-weight:bold
+}
+
+.hljs .hljs-emphasis{
+	font-style:italic
+}
+
+.hljs .hljs-keyword,.hljs .hljs-selector-tag,.hljs .hljs-name,.hljs .hljs-attr{
+	color:#f92672
+}
+
+.hljs .hljs-symbol,.hljs .hljs-attribute{
+	color:#66d9ef
+}
+
+.hljs .hljs-params,.hljs .hljs-class .hljs-title{
+	color:#f8f8f2
+}
+
+.hljs .hljs-string,.hljs .hljs-type,.hljs .hljs-built_in,.hljs .hljs-builtin-name,.hljs .hljs-selector-id,.hljs .hljs-selector-attr,.hljs .hljs-selector-pseudo,.hljs .hljs-addition,.hljs .hljs-variable,.hljs .hljs-template-variable{
+	color:#e6db74
+}
+
+.hljs .hljs-comment,.hljs .hljs-deletion,.hljs .hljs-meta{
+	color:#75715e
+}
+
+.hljs .hljs,.hljs .hljs-tag,.hljs .css .hljs-rules,.hljs .css .hljs-value,.hljs .css .hljs-function .hljs-preprocessor,.hljs .hljs-pragma{
+	color:#f8f8f2
+}
+
+.hljs .hljs-strongemphasis,.hljs .hljs-strong,.hljs .hljs-emphasis{
+	color:#a8a8a2
+}
+
+.hljs .hljs-bullet,.hljs .hljs-blockquote,.hljs .hljs-horizontal_rule,.hljs .hljs-number,.hljs .hljs-regexp,.hljs .alias .hljs-keyword,.hljs .hljs-literal,.hljs .hljs-hexcolor{
+	color:#ae81ff
+}
+
+.hljs .hljs-tag .hljs-value,.hljs .hljs-code,.hljs .hljs-title,.hljs .css .hljs-class,.hljs .hljs-class .hljs-title:last-child{
+	color:#a6e22e
+}
+
+.hljs .hljs-link_url{
+	font-size:80%
+}
+
+.hljs .hljs-strong,.hljs .hljs-strongemphasis{
+	font-weight:bold
+}
+
+.hljs .hljs-emphasis,.hljs .hljs-strongemphasis,.hljs .hljs-class .hljs-title:last-child{
+	font-style:italic
+}
+
+.hljs .hljs-keyword,.hljs .hljs-function,.hljs .hljs-change,.hljs .hljs-winutils,.hljs .hljs-flow,.hljs .lisp .hljs-title,.hljs .clojure .hljs-built_in,.hljs .nginx .hljs-title,.hljs .tex .hljs-special,.hljs .hljs-header,.hljs .hljs-attribute,.hljs .hljs-symbol,.hljs .hljs-symbol .hljs-string,.hljs .hljs-tag .hljs-title,.hljs .hljs-value,.hljs .alias .hljs-keyword:first-child,.hljs .css .hljs-tag,.hljs .css .unit,.hljs .css .hljs-important{
+	color:#f92672
+}
+
+.hljs .hljs-function .hljs-keyword,.hljs .hljs-class .hljs-keyword:first-child,.hljs .hljs-constant,.hljs .css .hljs-attribute{
+	color:#66d9ef
+}
+
+.hljs .hljs-variable,.hljs .hljs-params,.hljs .hljs-class .hljs-title{
+	color:#f8f8f2
+}
+
+.hljs .hljs-string,.hljs .css .hljs-id,.hljs .hljs-subst,.hljs .haskell .hljs-type,.hljs .ruby .hljs-class .hljs-parent,.hljs .hljs-built_in,.hljs .sql .hljs-aggregate,.hljs .django .hljs-template_tag,.hljs .django .hljs-variable,.hljs .smalltalk .hljs-class,.hljs .django .hljs-filter .hljs-argument,.hljs .smalltalk .hljs-localvars,.hljs .smalltalk .hljs-array,.hljs .hljs-attr_selector,.hljs .hljs-pseudo,.hljs .hljs-addition,.hljs .hljs-stream,.hljs .hljs-envvar,.hljs .apache .hljs-tag,.hljs .apache .hljs-cbracket,.hljs .tex .hljs-command,.hljs .hljs-prompt,.hljs .hljs-link_label,.hljs .hljs-link_url{
+	color:#e6db74
+}
+
+.hljs .hljs-comment,.hljs .hljs-javadoc,.hljs .java .hljs-annotation,.hljs .python .hljs-decorator,.hljs .hljs-template_comment,.hljs .hljs-pi,.hljs .hljs-doctype,.hljs .hljs-deletion,.hljs .hljs-shebang,.hljs .apache .hljs-sqbracket,.hljs .tex .hljs-formula{
+	color:#75715e
+}
+
+.hljs .coffeescript .javascript,.hljs .javascript .xml,.hljs .tex .hljs-formula,.hljs .xml .javascript,.hljs .xml .vbscript,.hljs .xml .css,.hljs .xml .hljs-cdata,.hljs .xml .php,.hljs .php .xml{
+	opacity:.5
+}

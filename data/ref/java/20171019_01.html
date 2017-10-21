@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Java理论知识复览II</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+		<link rel="stylesheet" href="../../../assets/css/marxico.css" />
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="../../../index.html">Yepoch Blog</a></h1>
+				<nav><a href="#menu">目录</a></nav>
+			</header>
+
+			<!-- Wrapper -->
+			<section id="wrapper">
+				<header>
+					<div class="inner">
+						<h2>Java理论知识复览II</h2>
+						<p>对象与类</p>
+					</div>
+				</header>
+
+				<div class="wrapper"><div class="inner">
+					<!-- One -->
+					<section>
+						<h3 class="major">面向对象程序设计概述</h3>
+						<!-- 1-2 -->
+						<h4>类</h4>
+							<p>类是构造对象的模板或蓝图。由类构造对象的过程称为创建类的实例。
+							<br />封装是与对象有关的一个重要概念。从形式上看，封装不过是将数据和行为组合在一个包中，并对对象的使用者隐藏了数据的实现方式。对象中的数据称为实例域，操纵数据的过程称为方法。对于每个特定的类实例都有一组特定的实例域值。这些值的集合就是这个对象的当前状态。</p>
+						<!-- 1-2 -->
+						<h4>对象</h4>
+						<!-- 1-3 -->
+						<h4>类之间的关系</h4>
+						<div class="row"><div class="12u$"><ul>
+							<li>依赖，即"uses-a"关系，是一种最明显、最常见的关系。如果一个类的方法操纵了另一个类的对象，我们就说一个类依赖于另一个类。同时，应该尽可能地将相互依赖的类减至最少。用软件工程的术语来说，就是让类之间的耦合度最小。</li>
+							<li>聚合，即"has-a"关系，是一种具体且易于理解的关系。聚合关系意味着类A的对象包含类B的对象。</li>
+							<li>继承，即"is-a"关系，是一种用于表示特殊与一般关系的。</li>
+						</ul></div></div>
+					</section>
+					<!-- Two -->
+					<section>
+						<h3 class="major">静态域与静态方法</h3>
+						<!-- 2-1 -->
+						<h4>静态域</h4>
+							<p>如果将域定义为static，每个类中只有一个这样的域，而每一个对象对于所有的实例域却都有自己的一份拷贝。静态域属于类，而不属于任何独立的对象。例如，可以完成如下的初始化操作：</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span></span> {
+</div><div><span class="hljs-comment">2.</span>    <span class="hljs-keyword">private static int</span> nextId = 1;
+</div><div><span class="hljs-comment">3.</span>    <span class="hljs-keyword">private int</span> id = assignId();
+</div><div><span class="hljs-comment">4.</span>
+</div><div><span class="hljs-comment">5.</span>    <span class="hljs-function"><span class="hljs-keyword">private static int</span> <span class="hljs-title">assignId</span></span>() {
+</div><div><span class="hljs-comment">6.</span>        <span class="hljs-keyword">int</span> r = nextId;
+</div><div><span class="hljs-comment">7.</span>        nextId++;
+</div><div><span class="hljs-comment">8.</span>        <span class="hljs-keyword">return</span> r;
+</div><div><span class="hljs-comment">9.</span>    {
+</div><div><span class="hljs-comment">10.</span>{
+</div></code></pre>
+						<!-- 2-2 -->
+						<h4>静态常量</h4>
+						<!-- 2-3 -->
+						<h4>静态方法</h4>
+							<p>静态方法是一种不能向对象实施操作的方法，但是静态方法可以访问自身类中的静态域。</p>
+					</section>
+				</div></div>
+			</section>
+
+			<section id="footer"><div class="inner">
+				<ul class="copyright"><li>&copy; Yepoch Inc. All rights reserved.</li></ul>
+			</div></section>
+		</div>
+
+		<script src="../../../assets/js/skel.min.js"></script>
+		<script src="../../../assets/js/jquery.min.js"></script>
+		<script src="../../../assets/js/util.js"></script>
+		<script src="../../../assets/js/main.js"></script>
+	</body>
+</html>

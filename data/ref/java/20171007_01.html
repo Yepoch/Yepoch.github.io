@@ -1,0 +1,840 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Java理论知识复览I</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+		<link rel="stylesheet" href="../../../assets/css/marxico.css" />
+	</head>
+
+	<body>
+		<div id="page-wrapper">
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="../../../index.html">Yepoch Blog</a></h1>
+				<nav>
+					<a href="#menu">目录</a>
+				</nav>
+			</header>
+			
+			<!-- Menu -->
+			<nav id="menu">
+				<div class="inner">
+					<h2>目录</h2>
+					<ul class="links">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="docIndex.html">文档</a></li>
+						<li><a href="refIndex.html">笔记</a></li>
+						<li><a href="lifIndex.html">个人</a></li>
+					</ul>
+					<a href="#" class="close"></a>
+				</div>
+			</nav>
+			
+			<!-- Wrapper -->
+			<section id="wrapper">
+				<header>
+					<div class="inner">
+						<h2>Java理论知识复览I</h2>
+						<p>基本概念 &#9679; 基本程序设计结构</p>
+					</div>
+				</header>
+				
+				<!-- Content -->
+				<div class="wrapper">
+					<div class="inner">
+						<!-- One -->
+						<section>
+							<h3 class="major">Java白皮书</h3>
+							<p>
+								Java白皮书用来解释设计的初衷以及完成的情况，Java设计者为此进行了编写并发布了一个简短的摘要。这个摘要用下面11个关键术语进行组织：
+							</p>
+							<div class="row">
+								<div class="12u$">
+									<ul>
+										<li>
+											简单性：Java语法是C++语法的一个“纯净”版本，剔除了头文件、指针运算、结构、联合、操作符重载、虚基类等；
+										</li>
+										<li>
+											面向对象：将重点放在数据和对象的接口上；
+										</li>
+										<li>
+											网络技能：Java有扩展例程库用于处理诸如TCP/IP协议；
+										</li>
+										<li>
+											健壮性：Java的设计目标之一在于使得Java编写的程序具有多方面的可靠性；
+										</li>
+										<li>
+											安全性：Java适用于网络/分布式环境；
+										</li>
+										<li>
+											体系结构中立：编译器生成一个体系结构中立的目标文件格式，这是一种编译过的代码，只要有Java运行时系统，就可以在许多处理器上运行。Java编译器通过生成与特定的计算机体系结构无关的字节码指令来实现这一特性；
+										</li>
+										<li>
+											可移植性：基本数据类型的大小以及有关算法都做了明确的说明；
+										</li>
+										<li>
+											解释性：Java解释器可以在任何移植了解释器的机器上执行Java字节码；
+										</li>
+										<li>
+											高性能：即时编译器可以监控经常执行哪些代码并优化这些代码以提高速度，更为复杂的优化是消除函数调用，即时编译器知道已加载类，并基于当前加载类集进行“内嵌”；
+										</li>
+										<li>
+											多线程
+										</li>
+										<li>
+											动态性
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- Two -->
+						<section>
+							<h3 class="major">Java的基本程序设计结构</h3>
+							<div class="12u">
+								<ul>
+									<li>
+										Java对大小写敏感，标准命名规范为：类名是以大写字母开头的名词，并且符合驼峰命名法；
+									</li>
+									<li>
+										Java中每个句子必须使用分号结束。
+									</li>
+								</ul>
+							</div>
+							<pre class="hljs"><code class="hljs"><div class="hljs-line"><span class="hljs-comment">1.</span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span> <span class="hljs-title">FirstSample</span> {
+</div><div class="hljs-line"><span class="hljs-comment">2.</span>    <span class="hljs-function"><span class="hljs-keyword">public static void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span> {
+</div><div class="hljs-line"><span class="hljs-comment">3.</span>        System.out.println(<span class="hljs-string">"Hello, World!"</span>);
+</div><div class="hljs-line"><span class="hljs-comment">4.</span>    }
+</div><div class="hljs-line"><span class="hljs-comment">5.</span>}</div></code></pre>
+						</section>
+						<!-- Three -->
+						<section>
+							<h3 class="major">注释</h3>
+							<pre class="hljs"><code class="hljs"><div class="hljs-line"><span class="hljs-comment">1.</span><span class="hljs-comment">/**</span>
+</div><div class="hljs-line"><span class="hljs-comment">2. * This is the sample program</span>
+</div><div class="hljs-line"><span class="hljs-comment">3. * @version 1.01 1997-03-22</span>
+</div><div class="hljs-line"><span class="hljs-comment">4. */</span>
+</div><div class="hljs-line"><span class="hljs-comment">5.</span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span></span> <span class="hljs-title">FirstSample</span> {
+</div><div class="hljs-line"><span class="hljs-comment">6.</span>    <span class="hljs-function"><span class="hljs-keyword">public static void</span> <span class="hljs-title">main</span><span cl
+ass="hljs-params">(String[] args)</span></span> {
+</div><div class="hljs-line"><span class="hljs-comment">7.</span>        System.out.println(<span class="hljs-string">"We will not use 'Hello, World!'"</span>)
+</div><div class="hljs-line"><span class="hljs-comment">8.</span>    }
+</div><div class="hljs-line"><span class="hljs-comment">9.</span>}</div></code></pre>
+						</section>
+						<!-- Four -->
+						<section>
+							<h3 class="major">数据类型</h3>
+							<!-- 4-1 -->
+							<h4>整型</h4>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>
+										Java中所有的数值类型所占据字节数量是固定的，与平台无关；
+									</li>
+									<li>
+										为方便阅读可在数字内添加下划线，如1_000_000，编译器会自动将其去除；
+									</li>
+									<li>
+										诸如前缀0x，0b代表八进制和二进制，后缀L代表长整型数值；
+									</li>
+									<li>
+										Java没有usigned类型。
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>类型</th>
+											<th>存储需求</th>
+											<th>取值范围</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>int</td>
+											<td>4字节</td>
+											<td>-2 147 483 648 ~ 2 147 483 647</td>
+										</tr>
+										<tr>
+											<td>short</td>
+											<td>2字节</td>
+											<td>-32 768 ~ 32 767</td>
+										</tr>
+										<tr>
+											<td>long</td>
+											<td>8字节</td>
+											<td>-9 223 372 036 854 775 808 ~ 9 223 372 036 854 775 807</td>
+										</tr>
+										<tr>
+											<td>byte</td>
+											<td>1字节</td>
+											<td>-128 ~ 127</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 4-2 -->
+							<h4>浮点类型</h4>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>
+										后缀 F 为 float 类型数值，没有后缀 F 默认为 double 类型；
+									</li>
+									<li>
+										浮点数值不适用于禁止出现舍入误差的金融计算中。例如，命令System.out.println(2.0-1.1)将打印出0.899999999999999，而不是0.9.主要原因是浮点数值采用二进制系统表示，而在二进制系统中无法精确表示分数1/10。如果需要在数值计算中不含有任何舍入误差，应使用BigDecimal类。
+									</li>
+								</ul>
+							</div>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>类型</th>
+											<th>存储需求</th>
+											<th>取值范围</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>float</td>
+											<td>4字节</td>
+											<td>大约&plusmn;3.402 823 47E + 38F（有效位数为6~7位）</td>
+										</tr>
+										<tr>
+											<td>double</td>
+											<td>8字节</td>
+											<td>大约&plusmn;1.797 693 134 862 315 70E + 308（有效位数为15位）</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- 4-3 -->
+							<h4>char类型</h4>
+							<!-- 4-4 -->
+							<h4>boolean类型</h4>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>整型值和布尔值之间不能进行相互转换。</li>
+								</ul>
+							</div>
+						</section>
+						<!-- Five -->
+						<section>
+							<h3 class="major">变量</h3>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>在声明变量时，变量所属的类型位于变量名之前；</li>
+									<li>变量名中所有的字符都是有意义的，并且大小写敏感；</li>
+									<li>变量名的长度没有限制。</li>
+								</ul>
+							</div>
+							<!-- 5-1 -->
+							<h4>变量初始化</h4>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>声明一个变量后，必须用赋值语句对变量进行显式初始化；</li>
+									<li>在Java中，变量的声明尽可能地靠近变量第一次使用的地方，这是一种良好的程序编写风格。</li>
+								</ul>
+							</div>
+							<!-- 5-2 -->
+							<h4>常量</h4>
+							<div class="6u 12u$(large)">
+								<ul>
+									<li>关键字final表示这个变量只能被赋值一次，一旦赋值后就不能够再次更改；</li>
+									<li>习惯上常量名使用全大写。</li>
+								</ul>
+							</div>
+							<pre class="hljs"><code class="language-java hljs"><div class="hljs-line"><span class="hljs-comment">1.</span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title"> Constants</span></span> {
+</div><div><span class="hljs-comment">2.</span>    <span class="hljs-function"><span class="hljs-keyword">public static void</span> <span class="hljs-title">main</span></span>(String[] args) {
+</div><div><span class="hljs-comment">3.</span>        <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> CM_PER_INCH = <span class="hljs-number">2.54</span>;
+</div><div><span class="hljs-comment">4.</span>        <span class="hljs-keyword">double</span> paperWidth = <span class="hljs-number">8.5</span>;
+</div><div><span class="hljs-comment">5.</span>        <span class="hljs-keyword">double</span> paperHeight = <span class="hljs-number">11</span>;
+</div><div><span class="hljs-comment">6.</span>        System.out.println(<span class="hljs-string">"Paper size in centimeters:"</span>
+</div><div><span class="hljs-comment">7.</span>            + paperWidth * CM_PER_INCH + <span class="hljs-string">"by "</span>
+</div><div><span class="hljs-comment">8.</span>            + paperHeight * CM_PER_INCH);
+</div><div><span class="hljs-comment">9.</span>    }
+</div><div><span class="hljs-comment">10.</span>}</div></code></pre>
+						</section>
+						<!-- Six -->
+						<section>
+							<h3 class="major">运算符</h3>
+							<!-- 6-1 -->
+							<h4>自增运算符与自减运算符</h4>
+							<pre class="hljs"><code class="language-java hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int</span> m = <span class="hljs-number">7</span>;
+</div><div><span class="hljs-comment">2.</span><span class="hljs-keyword">int</span> n = <span class="hljs-number">7</span>;
+</div><div><span class="hljs-comment">3.</span><span class="hljs-keyword">int</span> a = <span class="hljs-number">2</span> * ++m; <span class="hljs-comment">// now a is 16, m is 8</span>
+</div><div><span class="hljs-comment">4.</span><span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span> * n++; <span class="hljs-comment">// now b is 14, n is 8</span></div></code></pre>
+							<!-- 6-2 -->
+							<h4>关系运算符与boolean运算符</h4>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span>x&lt;y ? x:y <span class="hljs-comment">//return min of x and y</span></div></code></pre>
+							<!-- 6-3 -->
+							<h4>位运算符</h4>
+							<p>如果n是一个整型变量，并且用二进制表示的n从右数第4位为1，则</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int</span> fourthBitFormRight = (n &amp; <span class="hljs-number">0b1000</span>) / <span class="hljs-number">0b1000</span>;
+</div><div><span class="hljs-comment">2.</span><span class="hljs-keyword">int</span> fourthBitFormRight = (n &amp; (<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">3</span>)) &gt;&gt; <span class="hljs-number">3</span>;</div></code></pre>
+							<p>上述两条语句都将返回1。</p>
+							<blockquote>
+								<p>对移位运算符右侧的参数需要进行模32的运算（除非左边的操作数是 long 类型，在这种情况下需对右侧操作数模 64）。例如，1&lt;&lt;35与1&lt;&lt;3是相同的。</p>
+							</blockquote>
+							<!-- 6-4 -->
+							<h4>数值类型之间的转换</h4>
+							<p>
+								<span class="image right"><img src="img/ref01.jpg" alt="" /></span>
+								在图中有6个实心箭头，表示无信息丢失的转换；有3个虚箭头，表示可能有精度损失的转换。例如，123 456 789是一个大整数，它所包含的位数比float类型所能表达的位数多。当将这个整型数值转换为float类型时，将会得到同样大小的结果，但却失去了一定的精度。
+								<br />当使用两种数值进行二元操作时（例如n+f，n是整数，f是浮点数），先要将两个操作数转换为同一种类型，然后再进行计算。
+								<br />&#8226; 如果两个操作数中有一个是double类型，另一个操作数就会转换为double类型。
+								<br />&#8226; 否则，如果其中一个操作数是float类型，另一个操作数将会转换为float类型。
+								<br />&#8226; 否则，如果其中一个操作数是long类型，另一个操作数将会转换为long类型。
+								<br />&#8226; 否则，两个操作数都将被转换为int类型。
+							</p>
+						</section>
+						<!-- Seven -->
+						<section>
+							<h3 class="major">字符串</h3>
+							<p>从概念上讲，Java字符串就是Unicode字符序列。Java没有内置的字符串类型，而是在标准Java类库中提供了一个预定义类，很自然地叫做String。每个用双引号括起来的字符串都是String类的一个实例。Java中，相比于字符型数组，字符串更加像char*指针。</p>
+							<!-- 7-1 -->
+							<h4>子串与拼接</h4>
+							<p>String类的substring方法可以从一个较大的字符串提取出一个子串。substring方法的第二个参数是不想复制的第一个位置。这里复制的位置为0、1、2不包含3。</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span>String greeting = "<span class="hljs-string">Hello</span>";
+</div><div><span class="hljs-comment">2.</span>String s = greeting.substring(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>);</div></code></pre>
+							<p>与绝大多数的程序设计语言一样，Java语言允许使用+号连接两个字符串。当将一个字符串与一个非字符串的值进行拼接时，后者被转换成字符串。</p>
+							<!-- 7-2 -->
+							<h4>不可变字符串</h4>
+							<p>String类没有提供用于修改字符串的方法。由于不能修改Java字符串中的字符，所以在Java文档中将String类对象称为不可变字符串。虽然每次修改都相当于重新创建一个新字符串，但不可变字符串使得编译器可以让字符串共享。即将各种字符串存放在公共的存储池中，字符串变量指向存储池中相应的位置。如果复制一个字符串变量，原始字符串与复制的字符串共享相同的字符。</p>
+							<!-- 7-3 -->
+							<h4>检测字符串是否相等</h4>
+							<p>在Java中应使用equals方法检测两字符串是否相等。需要注意的是不能使用==运算符检测两个字符串是否相等，这个运算符只能够确定两个字符串是否放在同一个位置。如果虚拟机始终将相同的字符串共享，就可以使用==运算符检测是否相等。但实际只有字符串常量是共享的，而+或substring等操作产生的结果并不是共享的。</p>
+							<!-- 7-4 -->
+							<h4>代码点与代码单元</h4>
+							<p>Java字符串由char序列组成。char数据类型是一个采用UTF-16编码表示Unicode代码点的代码单元。大多数的常用Unicode字符使用一个代码单元就可以表示，而辅助字符需要一对代码单元表示。
+							<br />length方法将返回采用UTF-16编码表示的给定字符串所需要的代码单元数量。</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span>String greeting = "<span class="hljs-string">Hello</span>";
+</div><div><span class="hljs-comment">2.</span><span class="hljs-keyword">int</span> n = greeting.length(); <span class="hljs-comment">// is 5.</span></div></code></pre>
+							<p>要想得到实际的长度，即代码点数量，可以调用：</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int</span> cpCount = greeting.codePointCount(<span class="hljs-number">0</span>, greeting.length());</div></code></pre>
+							<p>由于现有编码中存在不同的代码单元构成的字符，因此不建议使用char类型进行字符串内字码获取。要想得到第i个代码点，应该使用语句：</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int</span> index = greeting.offsetByCodePoints(<span class="hljs-number">0</span>, i);
+</div><div><span class="hljs-comment">2.</span><span class="hljs-keyword">int</span> cp = greeting.codePointAt(index);</div></code></pre>
+							<p>如果想要遍历一个字符串，并且依次查看每一个代码点，可以使用下列语句：</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">while</span>(<span class="hljs-keyword">int</span> i &lt; sentence.length()) {
+</div><div><span class="hljs-comment">2.</span>    <span class="hljs-keyword">int</span> cp = sentence.codePointAt(i);
+</div><div><span class="hljs-comment">3.</span>    <span class="hljs-keyword">if</span>(Character.isSupplementaryCodePoint(cp)) i+=<span class="hljs-number">2</span>;
+</div><div><span class="hljs-comment">4.</span>    <span class="hljs-keyword">else</span> i++;
+</div><div><span class="hljs-comment">5.</span>}</div></code></pre>
+							<!-- 7-5 -->
+							<h4>字符串API</h4>
+							<blockquote>
+								<div class="row">
+								<div class="6u">
+									<ul>
+										<li>
+											char charAt(int index)
+											<p>返回给定位置的代码单元。除非对底层的代码单元感兴趣，否则不需要调用这个方法。</p>
+										</li>
+										<li>
+											int codePointAt(int index)
+											<p>返回从给定位置开始或结束的代码点。</p>
+										</li>
+										<li>
+											int offsetByCodePoints(int startIndex, int cpCount)
+											<p>返回从startIndex代码点开始，位移cpCount后的代码点索引。</p>
+										</li>
+										<li>
+											int compareTo(String other)
+											<p>按照字典顺序，如果字符串位于other之前，返回一个负数；如果字符串位于other之后，返回一个正数；如果两个字符串相等，返回0。</p>
+										</li>
+										<li>
+											boolean endWith(String suffix)
+											<p>如果字符串以suffix结尾，返回true。</p>
+										</li>
+										<li>
+											boolean equals(Object other)
+											<p>如果字符串与other相等，返回true。</p>
+										</li>
+										<li>
+											boolean equalsIgnoreCase(String other)
+											<p>如果字符串与other相等（忽略大小写），返回true。</p>
+										</li>
+										<li>
+											int indexOf(String str)
+										</li>
+										<li>
+											int indexOf(String str, int fromIndex)
+										</li>
+										<li>
+											int indexOf(int cp)
+										</li>
+										<li>
+											int indexOf(int cp, int fromIndex)
+											<p>返回与字符串str或代码点cp匹配的第一个子串的开始位置。这个位置从索引0或fromIndex开始计算。如果在原始串中不存在str，返回-1。</p>
+										</li>
+										<li>
+											int lastIndexOf(String str)
+										</li>
+										<li>
+											int lastIndexOf(String str, int fromIndex)
+										</li>
+										<li>
+											int lastIndexOf(int cp)
+										</li>
+										<li>
+											int lastIndexOf(int cp, int fromIndex)
+											<p>返回与字符串str或代码点cp匹配的最后一个子串的开始位置。这个位置从原始串尾端或fromIndex开始计算。</p>
+										</li>
+									</ul>
+								</div>
+								<div class="6u$">
+									<ul>
+										<li>
+											int length()
+											<p>返回字符串的代码单元长度。</p>
+										</li>
+										<li>
+											int codePointCount(int startIndex, int endIndex)
+											<p>返回startIndex和endIndex-1之间的代码点数量。没有配成对的代用字符将计入代码点。</p>
+										</li>
+										<li>
+											String replace(CharSequence oldString, CharSequence newString)
+											<p>返回一个新字符串。这个字符串用newString代替原始字符串中所有的oldString。可以用String或StringBuilder对象作为CharSequence参数。</p>
+										</li>
+										<li>
+											boolean startsWith(String prefix)
+											<p>如果字符串以prefix字符串开始，返回true。</p>
+										</li>
+										<li>
+											String substring(int beginIndex)
+										</li>
+										<li>
+											String substring(int beginIndex, int endIndex)
+											<p>返回一个新字符串。这个字符串包含原始字符串从beginIndex到串尾或endIndex-1的所有代码单元。</p>
+										</li>
+										<li>
+											String toLowerCase()
+											<p>返回一个新字符串。这个字符串将原始字符串中的所有大写字母改成了小写字母。</p>
+										</li>
+										<li>
+											String toUpperCase()
+											<p>返回一个新字符串。这个字符串将原始字符串中的所有小写字母改成了大写字母。</p>
+										</li>
+										<li>
+											String trim()
+											<p>返回一个新字符串。这个字符串将删除原始字符串头部和尾部的空格。</p>
+										</li>
+									</ul>
+								</div>
+								</div>
+							</blockquote>
+							<!-- 7-6 -->
+							<h4>构建字符串</h4>
+							<p>每次连接字符串，都会构建一个新的String对象，使用StringBuilder类则可以避免这个问题的发生。在需要构建字符串时调用toString方法，将可以得到一个String对象，其中包含了构建器中的字符序列。</p>
+							<blockquote>
+								<div class="row">
+								<div class="6u">
+									<ul>
+										<li>
+											StringBuilder()
+											<p>构造一个空的字符串构建器。</p>
+										</li>
+										<li>
+											int length()
+											<p>返回构建器或缓冲器中的代码单元数量。</p>
+										</li>
+										<li>
+											StringBuilder append(String str)
+											<p>追加一个字符串并返回this。</p>
+										</li>
+										<li>
+											StringBuilder append(char c)
+											<p>追加一个代码单元并返回this。</p>
+										</li>
+										<li>
+											StringBuilder appendCodePoint(int cp)
+											<p>追加一个代码点，并将其转换为一个或两个代码单元并返回this。</p>
+										</li>
+									</ul>
+								</div>
+								<div class="6u$">
+									<ul>
+										<li>
+											void setCharAt(int i, char c)
+											<p>将第i个代码单元设置为c。</p>
+										</li>
+										<li>
+											StringBuilder insert(int offset, String str)
+											<p>在offset位置插入一个字符串并返回this。</p>
+										</li>
+										<li>
+											StringBuilder insert(int offset, Char c)
+											<p>在offset位置插入一个代码单元并返回this。</p>
+										</li>
+										<li>
+											StringBuilder delete(int startIndex, int endIndex)
+											<p>删除偏移量从startIndex到endIndex-1的代码单元并返回this。</p>
+										</li>
+										<li>
+											String toString()
+											<p>返回一个与构建器或缓冲器内容相同的字符串。</p>
+										</li>
+									</ul>
+								</div>
+								</div>
+							</blockquote>
+						</section>
+						<!-- Eight -->
+						<section>
+							<h3 class="major">输入输出</h3>
+							<!-- 8-1 -->
+							<h4>读取输入</h4>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">import</span> Java.util.*;
+</div><div><span class="hljs-comment">2.</span>
+</div><div><span class="hljs-comment">3./**</span>
+</div><div><span class="hljs-comment">4. * This program demonstrates console input.</span>
+</div><div><span class="hljs-comment">5. * @version 1.10 2004-02-10</span>
+</div><div><span class="hljs-comment">6. * @author Cay Horstmann</span>
+</div><div><span class="hljs-comment">7. */</span>
+</div><div><span class="hljs-comment">8.</span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputTest</span></span> {
+</div><div><span class="hljs-comment">9.</span>    <span class="hljs-function"><span class="hljs-keyword">public static void</span> <span class="hljs-title">main</span></span>(String[] args) {
+</div><div><span class="hljs-comment">10.</span>        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);
+</div><div><span class="hljs-comment">11.</span>        System.out.print("<span class="hljs-string">What is your name?</span>");
+</div><div><span class="hljs-comment">12.</span>        String name = in.nextLine();
+</div><div><span class="hljs-comment">13.</span>        System.out.print("<span class="hljs-string">How old are you?</span>");
+</div><div><span class="hljs-comment">14.</span>        <span class="hljs-keyword">int</span> age = in.nextInt();
+</div><div><span class="hljs-comment">15.</span>        System.out.println("<span class="hljs-string">Hello, </span>" + name + "<span class="hljs-string">. Next year, you'll be </span>" + (age + 1));
+</div><div><span class="hljs-comment">16.</span>    }
+</div><div><span class="hljs-comment">17.</span>}</div></code></pre>
+							<!-- 8-2 -->
+							<h4>格式化输出</h4>
+							<p>在printf中，可以使用多个参数，例如：</p>
+							<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span>System.out.printf("<span class="hljs-string">Hello, %s. Next year, you'll be %d</span>", name, age);</div></code></pre>
+							<p>每一个以%字符开始的格式说明符都用相应的参数替换。格式说明符尾部的转换符将指示被格式化的数值类型。下表列出了所有转换符。</p>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>转换符</th>
+											<th>类型</th>
+											<th>举例</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>d</td>
+											<td>十进制整数</td>
+											<td>159</td>
+										</tr>
+										<tr>
+											<td>x</td>
+											<td>十六进制整数</td>
+											<td>9f</td>
+										</tr>
+										<tr>
+											<td>o</td>
+											<td>八进制整数</td>
+											<td>237</td>
+										</tr>
+										<tr>
+											<td>f</td>
+											<td>定点浮点数</td>
+											<td>15.9</td>
+										</tr>
+										<tr>
+											<td>e</td>
+											<td>指数浮点数</td>
+											<td>1.59e+01</td>
+										</tr>
+										<tr>
+											<td>g</td>
+											<td>通用浮点数</td>
+											<td>——</td>
+										</tr>
+										<tr>
+											<td>a</td>
+											<td>十六进制浮点数</td>
+											<td>0x1.fccdp3</td>
+										</tr>
+										<tr>
+											<td>s</td>
+											<td>字符串</td>
+											<td>Hello</td>
+										</tr>
+										<tr>
+											<td>c</td>
+											<td>字符</td>
+											<td>H</td>
+										</tr>
+										<tr>
+											<td>b</td>
+											<td>布尔值</td>
+											<td>True</td>
+										</tr>
+										<tr>
+											<td>h</td>
+											<td>散列码</td>
+											<td>42628b2</td>
+										</tr>
+										<tr>
+											<td>tx</td>
+											<td>日期时间</td>
+											<td>——</td>
+										</tr>
+										<tr>
+											<td>%</td>
+											<td>百分号</td>
+											<td>%</td>
+										</tr>
+										<tr>
+											<td>n</td>
+											<td>与平台有关的行分隔符</td>
+											<td>——</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+						<!-- Nine -->
+						<section>
+							<h3 class="major">大数值</h3>
+							<div class="row">
+								<div class="6u">
+									<ul>
+										<li>
+											BigInteger add(BigInteger other)
+											<p>返回这个大整数和另一个大整数other的和。</p>
+										</li>
+										<li>
+											BigInteger subtract(BigInteger other)
+											<p>返回这个大整数和另一个大整数other的差。</p>
+										</li>
+										<li>
+											BigInteger multiply(BigInteger other)
+											<p>返回这个大整数和另一个大整数other的积。</p>
+										</li>
+										<li>
+											BigInteger divide(BigInteger other)
+											<p>返回这个大整数和另一个大整数other的商。</p>
+										</li>
+										<li>
+											BigInteger mod(BigInteger other)
+											<p>返回这个大整数和另一个大整数other的余数。</p>
+										</li>
+										<li>
+											int compareTo(BigInteger other)
+											<p>如果这个大整数与另一个大整数other相等，返回0；如果这个大整数小于另一个大整数other，返回负数；否则，返回正数。</p>
+										</li>
+										<li>
+											static BigInteger valueOf(long x)
+											<p>返回值等于x的大整数。</p>
+										</li>
+									</ul>
+								</div>
+								<div class="6u$">
+									<ul>
+										<li>
+											BigDecimal add(BigDecimal other)
+											<p>返回这个大实数和另一个大实数other的和。</p>
+										</li>
+										<li>
+											BigDecimal subtract(BigDecimal other)
+											<p>返回这个大实数和另一个大实数other的差。</p>
+										</li>
+										<li>
+											BigDecimal multiply(BigDecimal other)
+											<p>返回这个大实数和另一个大实数other的积。</p>
+										</li>
+										<li>
+											BigDecimal divide(BigDecimal other, RoundingMode mode)
+											<p>返回这个大实数和另一个大实数other的商。</p>
+										</li>
+										<li>
+											int compareTo(BigDecimal other)
+											<p>如果这个大实数和另一个大实数other相等，返回0；如果这个大实数小于另一个大实数，返回负数；否则，返回正数。</p>
+										</li>
+										<li>
+											static BigDecimal valueOf(long x)
+										</li>
+										<li>
+											static BigDecimal valueOf(long x, int scale)
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<!-- Ten -->
+						<section>
+							<h3 class="major">数组</h3>
+								<p>数组是一种数据结构，用来存储同一类型值的集合。通过一个整型下标可以访问数组中的每一个值。创建一个数字数组时，所有元素都初始化为0.boolean数组的元素会初始化为false。对象数组的元素则初始化为null，这表示这些元素还未存放任何对象。
+								<br />一旦创建了数组，就不能再改变它的大小。如果经常需要在运行过程中扩展数组的大小，则应使用另一种数据结构——数组列表（array list）。</p>
+								<!-- 10-1 -->
+								<h4>for each循环</h4>
+								<!-- 10-2 -->
+								<h4>数组初始化以及匿名数组</h4>
+								<p>在Java中，提供了一种创建数组对象并同时赋予初始值的简化书写形式。使用这种语句时，不需要调用new。</p>
+								<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int[]</span> smallPrimes = {<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>};
+</div><div><span class="hljs-comment">2.</span><span class="hljs-keyword">new int[]</span> {<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>};</div></code></pre>
+								<!-- 10-3 -->
+								<h4>数组拷贝</h4>
+									<p>如果希望将一个数组的所有值拷贝到一个新的数组中去，就要使用Arrays类的copyOf方法：</p>
+									<pre class="hljs"><code class="hljs"><div><span class="hljs-comment">1.</span><span class="hljs-keyword">int[]</span> copiedLuckyNumbers = Arrays.copyOf(luckyNumbers, luckyNumbers.length);</div></code></pre>
+									<p>第2个参数是新数组的长度，这个方法通常用于增加数组的大小。如果数组元素是数值型，那么多余的元素将被赋值为0；如果数组元素是布尔型，则将赋值为false；相反，如果长度小于原始数组的长度，则将只拷贝最前面的数据元素。</p>
+								<!-- 10-4 -->
+								<h4>命令行参数</h4>
+								<!-- 10-5 -->
+								<h4>数组排序</h4>
+									<p>要想对数值型数组进行排序，可以使用Arrays类中的sort方法。该方法使用了优化的快速排序算法。</p>
+									<div class="row">
+										<div class="6u">
+											<ul>
+												<li>
+													static String toString(type[] a)
+													<p>返回包含a中数据元素的字符串，这些数据元素被放在括号内，并用逗号分隔。</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的数组。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li>
+													static type copyOf(type[] a, int length)
+												</li>
+												<li>
+													static type copyOfRange(type[] a, int start, int end)
+													<p>返回与a类型相同的一个数组，其长度为length或者end-start，数组元素为a的值。</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的数组。</td>
+																</tr>
+																<tr>
+																	<td>start</td>
+																	<td>起始下标(包含这个值）。</td>
+																</tr>
+																<tr>
+																	<td>end</td>
+																	<td>终止下标（不包含这个值）。这个值可能大于a.length。在这种情况下，结果为0或false。</td>
+																</tr>
+																<tr>
+																	<td>length</td>
+																	<td>拷贝的数据元素长度。如果length值大于a.length，结果为0或false；否则，数组中只有前面length个数据元素的拷贝值。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li>
+													static void sort(type[] a)
+													<p>采用优化的快速排序算法对数组进行排序。</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的数组。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div class="6u$">
+											<ul>
+												<li>
+													static int binarySearch(type[] a, type v)
+												</li>
+												<li>
+													static int binarySearch(type[] a, int start, int end, type v)
+													<p>采用二分搜索算法查找值v。如果查找成功，则返回相应的下标值；否则，返回一个负数值r。-r-1是为保持a有序v应插入的位置。</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的有序数组。</td>
+																</tr>
+																<tr>
+																	<td>start</td>
+																	<td>起始下标（包含这个值）。</td>
+																</tr>
+																<tr>
+																	<td>end</td>
+																	<td>终止下标（不包含这个值）。</td>
+																</tr>
+																<tr>
+																	<td>v</td>
+																	<td>同a的数据元素类型相同的值。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li>
+													static void fill(type[] a, type v)
+													<p>将数组的所有数据元素值设置为v</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的数组。</td>
+																</tr>
+																<tr>
+																	<td>v</td>
+																	<td>同a的数据元素类型相同的值。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+												<li>
+													static boolean equals(type[] a, type[] b)
+													<p>如果两个数组大小相同，并且下标相同的元素都对应相等，返回true。</p>
+													<div class="table-wrapper">
+														<table class="alt">
+															<tbody>
+																<tr>
+																	<td>a、b</td>
+																	<td>类型为int、long、short、char、byte、boolean、float或double的两个数组。</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								<!-- 10-6 -->
+								<h4>多维数组</h4>
+								<!-- 10-7 -->
+								<h4>不规则数组</h4>
+						</section>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; Yepoch Inc. All rights reserved.</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		
+		<script src="../../../assets/js/skel.min.js"></script>
+		<script src="../../../assets/js/jquery.min.js"></script>
+		<script src="../../../assets/js/util.js"></script>
+		<script src="../../../assets/js/main.js"></script>
+	</body>
+</html>
