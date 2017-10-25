@@ -4,7 +4,7 @@ import os
 if __name__ == "__main__" :
     dirPath = os.getcwd()
     fileName = input('Key in the fileName:')
-    file = '%s%s%s%s' % (dirPath, '\\', fileName, '.html')
+    file = '%s%s%s%s' % (dirPath, os.sep, fileName, '.html')
     print(file)
     f = open(file, mode='w', newline='\n')
     dataStr = '<!doctype html>\n' \
